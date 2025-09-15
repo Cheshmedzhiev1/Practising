@@ -2,7 +2,7 @@ public class MainPrinter {
     public static void main(String[] args) {
         Printer printer = new Printer();
 
-        printer.addJob("A", 3);
+        printer.addJob("B", 5);
         printer.addJob("B", 2);
         printer.addJob("C", 1);
 
