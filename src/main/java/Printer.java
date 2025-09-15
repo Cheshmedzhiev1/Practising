@@ -11,10 +11,9 @@ public class Printer {
         time = 0;
     }
 
-    public void addJob(String jobId, int pages) {
-        PrintJob job = new PrintJob(pages, jobId);
-        queue.offer(job);
-        System.out.println("Added " + job + " added to the queue");
+    public void addJob(PrintJob printJob) {
+        queue.add(printJob);
+        System.out.println("Added " + printJob + " to the queue");
     }
 
     public void printPage() {
@@ -30,7 +29,7 @@ public class Printer {
         System.out.println("Time " + time + ": Printing page from " + currentJob);
         currentJob.decrementPages();
 
-        if (currentJob.getPages() == 0) {
+        if (currentJob.isJobFinished()) {
             PrintJob finishedJob = queue.poll();
             System.out.println("Time " + time + ": " + finishedJob + " Job is completed and removed from the queue");
         }

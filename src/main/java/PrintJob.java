@@ -20,6 +20,15 @@ public class PrintJob {
         return pages;
     }
 
+    public boolean isJobFinished (){
+        if(pages == 0){
+            System.out.println("Job is finished.");
+            return true;
+        }
+        System.out.println("Job is not finished yet.");
+        return false;
+    }
+
     @Override
     public String toString (){
         return "Job " + jobId + ": " + pages + " pages";

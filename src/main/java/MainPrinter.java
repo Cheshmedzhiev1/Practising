@@ -1,11 +1,18 @@
 public class MainPrinter {
     public static void main(String[] args) {
+
         Printer printer = new Printer();
 
-        printer.addJob("B", 5);
-        printer.addJob("B", 2);
-        printer.addJob("C", 1);
+      //  PrintJob printJob1 = new PrintJob(3, "First");
+        //intJob printJob2 = new PrintJob(1, "Second");
+        //PrintJob printJob3 = new PrintJob(2, "Third");
 
+
+       // printer.addJob(printJob1);
+       // printer.addJob(printJob2);
+       // printer.addJob(printJob3);
+
+        printer.printPage();
         printer.showQueue();
 
         while (printer.hasJobs()) {
