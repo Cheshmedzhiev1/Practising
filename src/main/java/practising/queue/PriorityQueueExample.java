@@ -17,10 +17,10 @@ public class PriorityQueueExample {
         System.out.println(pq.peek());
 
         System.out.println(pq);
-        System.out.println(pq.poll());
+        System.out.println(pq.poll());  //takes head of queue and removes it
 
         System.out.println(pq);
-        System.out.println(pq.peek());
+        System.out.println(pq.peek()); // takes head of the queue and does NOT remove it
 
         System.out.println(pq);
     }
